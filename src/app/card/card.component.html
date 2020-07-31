@@ -1,0 +1,28 @@
+<div class="card">
+
+  <div class="left" *ngIf="!showDesc">
+    <p>Name</p>
+    <p>Category</p>
+    <p>Latest Version</p>
+    <p>Documentation</p>
+  </div>
+  <div class="right" *ngIf="!showDesc">
+    <p>{{item.name}}</p>
+    <p>{{item.category}}</p>
+    <p>{{item.latestVersion}}</p>
+    <p>
+      <a href="{{item.documentation}}">
+        {{item.documentation}}
+      </a>
+    </p>
+  </div>
+  <div class="decription" *ngIf="showDesc">
+    <p>{{item.description}}</p>
+  </div>
+  <div class="action">
+    <button *ngIf="!showDesc" (click)="toggleDescription(true)">Description</button>
+    <button *ngIf="showDesc" (click)="toggleDescription(false)">Back</button>
+  </div>
+
+
+</div>

@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  flex: 100%;
+  border: 1px solid black;
+  padding: 15px;
+  margin-bottom: 10px;
+  min-height: 170px;
+
+  .left {
+    flex: 20%;
+  }
+
+  .right {
+    flex: 65%
+  }
+
+  .action {
+    flex: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    button {
+      border: 0;
+      background: #c3c3c3;
+      margin: 15px;
+      cursor: pointer;
+      color: #ffffff;
+      height: 30px;
+    }
+  }
+
+  .decription {
+    display: flex;
+    flex: 85%;
+  }
+}
